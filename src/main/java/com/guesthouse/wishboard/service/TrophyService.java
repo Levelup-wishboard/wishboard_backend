@@ -69,7 +69,7 @@ public class TrophyService {
         );
     }
 
-    // 버킷리스트트 ID에 해당하는 trophyDetail2(log들) 조회
+    // 버킷리스트 ID에 해당하는 trophyDetail2(log들) 조회
      public List<TrophyDetail2Dto> getBucketLogsSorted(Long bucketId, @AuthenticationPrincipal CustomUserDetail users) {
         User user = userRepository.findAllByUserId(users.getUsername());
         BucketList bucket = trophyRepository.findById(bucketId)
